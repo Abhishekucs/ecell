@@ -1,0 +1,214 @@
+.content__one {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url("/images/bg.png");
+  background-size: cover;
+}
+
+.content__one--title {
+  margin-bottom: 40rem;
+  text-align: center;
+  color: $bg-color;
+  h1 {
+    font-size: 10rem;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+  }
+  p {
+    margin: -20px 0 0 0;
+    font-weight: 400;
+    font-size: 3rem;
+  }
+}
+
+.button {
+  background: $bg-color;
+  border: none;
+  border-radius: 2rem;
+  padding: $s-size $l-size;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: $m-size;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0px 3px 5px 0.5px #131B23;
+}
+
+.about {
+  height: 100vh;
+  width: 100vw;
+  background: #635aa1;
+}
+
+.initiatives {
+  @extend .about;
+  background: #59c3c3;
+}
+
+.contactus {
+  @extend .about;
+}
+.about__body {
+  width: 85%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0 auto;
+  // background: #f45b69;
+}
+
+.about__body__content {
+  height: 100vh;
+}
+
+.about__title {
+  font-size: 10rem;
+  margin: 30rem 0 0 0;
+  color: $bg-color;
+}
+
+.about__subtitle {
+  width: 75%;
+  margin-top: -2rem;
+  font-size: 1.8rem;
+  color: $bg-color;
+}
+
+.button--about {
+  background: $bg-color;
+  color: black;
+  margin-top: 3rem;
+}
+
+.about__body__image {
+  margin-right: $l-size;
+}
+
+.initiatives__body {
+  @extend .about__body;
+}
+
+.initiatives__body__content {
+  @extend .about__body__content;
+}
+
+.initiatives__body__photo {
+  @extend .about__body__image;
+}
+
+.events {
+    @extend .about;
+    background-color: #DD6E42;
+}
+
+.events__body {
+    @extend .about__body;
+}
+
+.events__body__content {
+    @extend .about__body__content;
+}
+
+.events__body__image {
+    @extend .about__body__image;
+}
+
+.studentStartups {
+    @extend .about;
+    background-color: #4B88A2;
+}
+
+.studentStartups__body {
+    @extend .about__body;  
+}
+
+.studentStartups__body__content {
+    @extend .about__body__content;
+}
+
+.studentStartups__body__image {
+    @extend .about__body__image;
+}
+
+.team {
+    @extend .about;
+    background: #f45b69;
+}
+
+.team__body {
+    @extend .about__body;
+}
+
+.team__body__content {
+    @extend .about__body__content;
+}
+
+.team__body__image {
+    @extend .about__body__image;
+}
+
+.contactus {
+  @extend .about;
+  background: #DD6E42;
+}
+@media (max-width: $mobile) {
+  .content__one {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    justify-content: space-evenly;
+    padding: $l-size 0;
+  }
+  .content__one--title {
+    text-align: center;
+    margin-bottom: 0;
+    width: 85%;
+    margin: 0 auto;
+    h1 {
+      font-size: 3.8rem;
+      line-height: 4rem;
+      padding: 0;
+      font-family: "Montserrat", sans-serif;
+    }
+    p {
+      margin: 10px 0 0 0;
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+  }
+  .button {
+    font-size: 1.4rem;
+  }
+  .about__body {
+    padding: 5rem 0;
+    flex-direction: column-reverse;
+  }
+  .about__body__content {
+    height: 45vh;
+  }
+  .about__title{
+    font-size: 4rem;
+    line-height: 1;
+    margin: 0 0 1rem 0;
+  }
+  .about__subtitle {
+    width: 100%;
+    margin-top: 0rem;
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
+  .about__body__image {
+    height: 35%;
+    margin: 2rem 0 0 0;
+    img{
+      height: 100%;
+    }
+  }
+}
