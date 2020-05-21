@@ -7,7 +7,7 @@ const publicPath = Path.resolve(__dirname, 'build');
 
 app.use(express.static(publicPath))
 
-app.get('*', (req, res) => {
+app.get('/*', (req, res) => {
     res.sendFile(Path.resolve(publicPath, 'index.html' ))
 })
 
