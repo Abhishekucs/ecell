@@ -67,12 +67,9 @@ class ContactUs extends React.Component {
                 <p className="contact__subtitle">Feel free to contact us any time. We will get back to you as soon as we can!</p>
             </div>
             <form className="form">
-                <label>Name</label>
-                <input className="form__input" type="text" required />
-                <label>Email</label>
-                <input className="form__input" type="email" required />
-                <label>Message</label>
-                <textarea required></textarea>
+                <input className="form__input" type="text" placeholder="Name" required />
+                <input className="form__input" type="email" placeholder="Email" required />
+                <textarea placeholder="Message" required></textarea>
                 <button className="form__button" onClick={this.changeText}>{ this.state.changed ? 'Thank You' : 'Submit' }</button>
             </form>
         </div>
