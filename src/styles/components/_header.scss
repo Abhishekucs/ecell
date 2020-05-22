@@ -41,7 +41,7 @@ header {
     display: none;
 }
 
-@media (max-width: $mobile) {
+@media screen and (max-width: $mobile) {
     header {
         padding: $s-size $m-size 0 $m-size;
         .header__logo {
