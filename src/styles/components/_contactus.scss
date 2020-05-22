@@ -164,7 +164,7 @@
     }
 }
 
-@media(max-width: $mobile) {
+@media screen and (max-width: $mobile) {
     .body {
         flex-direction: column-reverse;
     }

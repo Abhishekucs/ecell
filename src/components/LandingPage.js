@@ -7,7 +7,7 @@ import Initiatives from './Initiatives';
 import ContactUs from './ContactUs';
 
 const LandingPage = () => (
-    <div>
+    <div className="langingPage__body">
         <div className="content__one">
             <div className="content__one--title">
                 <h1>Start Your Journey Here</h1>
