@@ -1,17 +1,16 @@
 header {
-    height: 8vh;
-    background-color: black;
+    height: 10vh;
+    background: none;
+    z-index: 1;
+    position: fixed;
 }
 .header {
-    z-index: 10;
-    position: fixed;
+    // position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: $s-size $m-size 0 $m-size;
-    padding-bottom: 0;
     background: none;
-    top: 0;
     width: 100vw;
     .header__logo {
         margin: 0;
@@ -66,6 +65,7 @@ header {
     .mobile__nav {
         display: block;
         margin-right: $s-size;
+        z-index: 5;
         .menu__button {
             background: none;
             border: none;

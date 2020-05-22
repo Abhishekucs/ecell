@@ -14,20 +14,17 @@ const Header = () => {
     const handleMenu = () => {
         disableMenu();
         if(state.initial === false) {
-            console.log(1)
             setState({
                 initial: null,
                 clicked: true,
                 menuName: "Close"
             });
         } else if (state.clicked === true) {
-            console.log(2)
             setState({
                 clicked: !state.clicked,
                 menuName: "Menu"
             });
         } else if (state.clicked === false) {
-            console.log(3)
             setState({
                 clicked: !state.clicked,
                 menuName: "Close"
