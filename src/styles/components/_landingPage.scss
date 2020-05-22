@@ -1,6 +1,6 @@
-// .langingPage__body {
-//   position: relative;
-// }
+.langingPage__body {
+  position: absolute;
+}
 .content__one {
   width: 100vw;
   height: 100vh;
@@ -160,6 +160,7 @@
 .contactus {
   @extend .about;
   background: #DD6E42;
+  position: relative;
 }
 @media screen and (max-width: $mobile) {
   .content__one {
