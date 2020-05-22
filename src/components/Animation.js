@@ -48,4 +48,16 @@ export const staggerTextClose = (node1, node2, node3, node4, node5, node6) => {
       }
     });
   };
+
+  export const landingText = (node1, node2) => {
+    gsap.from([node1, node2], {
+      duration: 0.8,
+      y: 100,
+      opacity:0,
+      ease: "power3.inOut",
+      stagger: {
+        amount: 0.3
+      }
+    });
+  }
   
