@@ -43,7 +43,7 @@
   font-size: $m-size;
   cursor: pointer;
   outline: none;
-  box-shadow: 0px 3px 5px 0.5px #131B23;
+  box-shadow: 0px 3px 5px 0.5px #131b23;
 }
 
 .about {
@@ -89,10 +89,14 @@
 }
 
 .button--about {
-  background: $bg-color;
-  color: black;
+  display: inline-block;
   margin-top: 3rem;
+  padding: $s-size $l-size;
+}
+.button--about > * {
+  background: $bg-color;
   text-decoration: none;
+  color: black;
 }
 
 .about__body__image {
@@ -112,59 +116,59 @@
 }
 
 .events {
-    @extend .about;
-    background-color: #DD6E42;
+  @extend .about;
+  background-color: #dd6e42;
 }
 
 .events__body {
-    @extend .about__body;
+  @extend .about__body;
 }
 
 .events__body__content {
-    @extend .about__body__content;
+  @extend .about__body__content;
 }
 
 .events__body__image {
-    @extend .about__body__image;
+  @extend .about__body__image;
 }
 
 .studentStartups {
-    @extend .about;
-    background-color: #4B88A2;
+  @extend .about;
+  background-color: #4b88a2;
 }
 
 .studentStartups__body {
-    @extend .about__body;  
+  @extend .about__body;
 }
 
 .studentStartups__body__content {
-    @extend .about__body__content;
+  @extend .about__body__content;
 }
 
 .studentStartups__body__image {
-    @extend .about__body__image;
+  @extend .about__body__image;
 }
 
 .team {
-    @extend .about;
-    background: #f45b69;
+  @extend .about;
+  background: #f45b69;
 }
 
 .team__body {
-    @extend .about__body;
+  @extend .about__body;
 }
 
 .team__body__content {
-    @extend .about__body__content;
+  @extend .about__body__content;
 }
 
 .team__body__image {
-    @extend .about__body__image;
+  @extend .about__body__image;
 }
 
 .contactus {
   @extend .about;
-  background: #DD6E42;
+  background: #dd6e42;
   position: relative;
 }
 @media screen and (max-width: $mobile) {
@@ -202,7 +206,7 @@
   .about__body__content {
     height: 45vh;
   }
-  .about__title{
+  .about__title {
     font-size: 4rem;
     line-height: 1;
     margin: 0 0 1rem 0;
@@ -216,7 +220,7 @@
   .about__body__image {
     height: 35%;
     margin: 2rem 0 0 0;
-    img{
+    img {
       height: 100%;
     }
   }

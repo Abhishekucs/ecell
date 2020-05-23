@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Initiatives = () => (
   <div className="initiatives__body">
@@ -9,10 +9,12 @@ const Initiatives = () => (
         Stimulating projects undertaken by us on a regular basis define our
         desire to innovate and resolve the problems of society.
       </p>
-      <Link to="/initiativesPage" className="button button--about">Initiatives</Link>
+      <span className="button button--about">
+        <Link to="/aboutPage">Initiatives</Link>
+      </span>
     </div>
     <div className="initiatives__body__photo">
-        <img src="/images/initiatives.png" alt="initiatives"/>
+      <img src="/images/initiatives.png" alt="initiatives" />
     </div>
   </div>
 );
