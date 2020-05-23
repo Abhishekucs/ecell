@@ -8,10 +8,6 @@
 .content__one {
   width: 100vw;
   height: 100vh;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // flex-direction: column;
 }
 
 .background {
@@ -26,8 +22,29 @@
   z-index: 1;
   h1 {
     font-size: 50rem;
+    
+  }
+  .background__text {
     font-family: serif;
     color: darken($bg-color, 5%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1;
+    font-family: 'Noto Serif', serif;
+    h1{
+      font-size: 20rem;
+      margin: 0;
+    }
+    h3 {
+      font-size: 10rem;
+      margin: 0;
+    }
+    h5 {
+      font-size: 5rem;
+      margin: 0;
+    }
   }
 }
 
@@ -55,12 +72,13 @@
   h1 {
     font-size: 10rem;
     margin: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Roboto', sans-serif;
   }
   p {
-    font-weight: 400;
+    font-weight: 600;
     font-size: 3rem;
     margin: 0;
+    font-family: 'Open Sans', sans-serif;
   }
 }
 
@@ -70,18 +88,19 @@
   border-radius: 2rem;
   padding: $s-size $l-size;
   color: white;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
+  // font-family: 'Roboto', sans-serif;
+  // font-weight: 600;
   font-size: $m-size;
   cursor: pointer;
   outline: none;
 }
 
 .top {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   position: absolute;
+  top: 0;
   z-index: 2;
 }
 .inner__overlay {
@@ -129,12 +148,15 @@
   font-size: 10rem;
   margin: 30rem 0 0 0;
   color: $bg-color;
+  font-family: 'Roboto', sans-serif;
 }
 
 .about__subtitle {
   width: 75%;
   margin-top: -2rem;
   font-size: 1.8rem;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
   color: $bg-color;
 }
 
@@ -229,26 +251,30 @@
     justify-content: space-evenly;
     padding: $l-size 0;
   }
-  .background {
+  .background__text {
     h1 {
-      font-size: 9rem;
+      font-size: 9rem !important;
+    }
+    h3 {
+      font-size: 4.5rem !important;
+    }
+    h5 {
+      font-size: 2.24rem !important;
     }
   }
   .content__one--title {
     text-align: center;
     margin-bottom: 0;
-    height: 10rem;
+    height: 12rem;
     width: 85%;
     margin: 0 auto;
     h1 {
-      font-size: 3.8rem;
+      font-size: 4rem;
       line-height: 4rem;
       padding: 0;
-      font-family: "Montserrat", sans-serif;
     }
     p {
       margin: 10px 0 0 0;
-      font-weight: 400;
       font-size: 1.5rem;
     }
   }

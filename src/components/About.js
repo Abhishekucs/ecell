@@ -26,7 +26,7 @@ const About = () => {
 
   const fadeOut = (element) => {
     gsap.to(element, 1, {
-      duration:1,
+      duration: 1,
       opacity: 0,
       y: -20,
       ease: "power4.out",

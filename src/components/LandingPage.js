@@ -37,12 +37,14 @@ const LandingPage = () => {
         <div className="background">
           <div className="background__text">
             <h1>E-CELL</h1>
+            <h3>NIT</h3>
+            <h5>Agartala</h5>
           </div>
         </div>
         <div className="foreground">
           <div className="content__one--title">
-            <h1 className="line">Start Your Journey Here</h1>
-            <p className="line">Ideate, Innovate, Incubate</p>
+            <h1 className="line line__title">Start Your Journey Here</h1>
+            <p className="line line__subtitle">Ideate, Innovate, Incubate</p>
           </div>
           <div className="button">
             <Link
