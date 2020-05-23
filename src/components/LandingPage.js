@@ -6,13 +6,15 @@ import StudentStartups from './StudentStartups';
 import Initiatives from './Initiatives';
 import ContactUs from './ContactUs';
 import { landingText } from './Animation';
+import { Link } from 'react-scroll';
 
 const LandingPage = () => {
     let line1 = useRef(null);
     let line2 = useRef(null);
-    let page = useRef(null);
 
-    const pageChange = (e) => page.scrollIntoView();
+    // const pageChange = (e) => page.scrollIntoView({
+    //     behaviour: "smooth"
+    // });
     useEffect(() => {
         landingText(line1, line2);
     })
@@ -23,9 +25,9 @@ const LandingPage = () => {
                     <h1 ref={el => (line1 = el)}>Start Your Journey Here</h1>
                     <p ref={el => (line2 = el)}>Ideate, Innovate, Incubate</p>
                 </div>
-                <button className="button" onClick={pageChange}>Explore</button>
+                <Link activeClass="active" className="button" type="click" to="about" smooth={true} duration={500} >Explore</Link>
             </div>
-            <div ref={el => (page = el)} className="about">
+            <div className="about" id="about">
                 <About />
             </div>
             <div className="initiatives">
