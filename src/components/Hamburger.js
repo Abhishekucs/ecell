@@ -37,12 +37,12 @@ const Hamburger = ({ state }) => {
             <div ref={el => (reveal2 = el)} className ="container__red">
                 <nav>
                     <ul>
-                        <li><Link ref={el => (line1 = el)} className="nav__link">Home</Link></li>
-                        <li><Link ref={el => (line2 = el)} className="nav__link">About</Link></li>
-                        <li><Link ref={el => (line3 = el)} className="nav__link">Initiatives</Link></li>
-                        <li><Link ref={el => (line4 = el)} className="nav__link">Events</Link></li>
-                        <li><Link ref={el => (line5 = el)} className="nav__link nav__link--ss">Studnet Startups</Link></li>
-                        <li><Link ref={el => (line6 = el)} className="nav__link">Team</Link></li>
+                        <li><Link ref={el => (line1 = el)} to="/" className="nav__link" exact={true}>Home</Link></li>
+                        <li><Link ref={el => (line2 = el)} to="/aboutPage" className="nav__link">About</Link></li>
+                        <li><Link ref={el => (line3 = el)} to="/initiativesPage" className="nav__link">Initiatives</Link></li>
+                        <li><Link ref={el => (line4 = el)} to="/eventsPage" className="nav__link">Events</Link></li>
+                        <li><Link ref={el => (line5 = el)} to="/studentStartupsPage" className="nav__link nav__link--ss">Studnet Startups</Link></li>
+                        <li><Link ref={el => (line6 = el)} to="/teamPage" className="nav__link">Team</Link></li>
                     </ul>
                 </nav>
             </div>

@@ -8,7 +8,7 @@ export const staggerReveal = (node1, node2) => {
       skewY: 2,
       ease: "power3.inOut",
       stagger: {
-        amount: 0.1
+        amount: 0.3
       }
     });
   };
@@ -19,7 +19,7 @@ export const staggerRevealClose = (node1, node2) => {
       height: 0,
       ease: "power3.inOut",
       stagger: {
-        amount: 0.07
+        amount: 0.2
       }
     });
 };

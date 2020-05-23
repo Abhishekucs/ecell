@@ -1,14 +1,19 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { withRouter, Link } from 'react-router-dom';
 import Hamburger from './Hamburger';
 
-const Header = () => {
+const Header = ({ history }) => {
     const [state, setState] = useState({
         initial: false,
         clicked: null,
-        menuName: "Menu"
+        menuName: "Menu",
     })
 
+    useEffect(() => {
+        history.listen(() => {
+            setState({clicked: false, menuName: "Menu"})
+        })
+    }, [history]);
     const [disabled, setDisabled] = useState(false);
 
     const handleMenu = () => {
@@ -46,11 +51,11 @@ const Header = () => {
             <div className="header__nav">
                 <ul>
                     <li><Link to="/" className="link" exact={true}>Home</Link></li>
-                    <li><Link to="/about" className="link">About</Link></li>
-                    <li><Link className="link">Team</Link></li>
-                    <li><Link className="link">Initiatives</Link></li>
-                    <li><Link className="link">Events</Link></li>
-                    <li><Link className="link">Student Startups</Link></li>
+                    <li><Link to="/aboutPage" className="link">About</Link></li>
+                    <li><Link to="/teamPage" className="link">Team</Link></li>
+                    <li><Link to="/initiativesPage" className="link">Initiatives</Link></li>
+                    <li><Link to="/eventsPage" className="link">Events</Link></li>
+                    <li><Link to="/studentStartupsPage" className="link">Student Startups</Link></li>
                     <li><Link className="link">Contact Us</Link></li>
                 </ul>
             </div>
@@ -63,4 +68,4 @@ const Header = () => {
     )
 };
 
-export default Header;
+export default withRouter(Header);

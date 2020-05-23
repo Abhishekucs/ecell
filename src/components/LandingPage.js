@@ -12,9 +12,6 @@ const LandingPage = () => {
     let line1 = useRef(null);
     let line2 = useRef(null);
 
-    // const pageChange = (e) => page.scrollIntoView({
-    //     behaviour: "smooth"
-    // });
     useEffect(() => {
         landingText(line1, line2);
     })
@@ -27,7 +24,7 @@ const LandingPage = () => {
                 </div>
                 <Link activeClass="active" className="button" type="click" to="about" smooth={true} duration={500} >Explore</Link>
             </div>
-            <div className="about" id="about">
+            <div className="about">
                 <About />
             </div>
             <div className="initiatives">
