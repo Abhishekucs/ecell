@@ -9,7 +9,7 @@ const About = () => {
   const intersection = useIntersection(line, {
     root: null,
     rootMargin: "0px",
-    threshold: 0.3,
+    threshold: 1,
   });
 
   const fadeIn = (element) => {
@@ -33,7 +33,7 @@ const About = () => {
     });
   };
 
-  intersection && intersection.intersectionRatio < 0.3
+  intersection && intersection.intersectionRatio < 1
     ? fadeOut(".fadeIn")
     : fadeIn(".fadeIn");
   return (

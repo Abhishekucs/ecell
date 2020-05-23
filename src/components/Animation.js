@@ -2,37 +2,35 @@ import gsap from "gsap";
 
 export const staggerReveal = (node1, node2) => {
   gsap.from([node1, node2], {
-    duration: 1,
+    duration: 0.8,
     height: 0,
     transformOrigin: "right top",
     skewY: 2,
     ease: "power3.inOut",
     stagger: {
-      amount: 0.3,
+      amount: 0.1,
     },
   });
 };
 
 export const staggerRevealClose = (node1, node2) => {
   gsap.to([node1, node2], {
-    duration: 1,
+    duration: 0.8,
     height: 0,
     ease: "power3.inOut",
     stagger: {
-      amount: 0.2,
+      amount: 0.07,
     },
   });
 };
 
 export const staggerText = (node1, node2, node3, node4, node5, node6) => {
-  gsap.fromTo(
+  gsap.from(
     [node1, node2, node3, node4, node5, node6],
-    { opacity: 0 },
     {
-      duration: 1,
+      duration: 0.8,
       y: 100,
-      opacity: 1,
-      delay: 0.5,
+      delay: 0.1,
       ease: "power3.inOut",
       stagger: {
         amount: 0.3,
@@ -53,14 +51,21 @@ export const staggerTextClose = (node1, node2, node3, node4, node5, node6) => {
   });
 };
 
-export const landingText = (node1, node2) => {
-  gsap.from([node1, node2], {
-    duration: 0.8,
-    y: 100,
-    opacity: 0,
-    ease: "power3.inOut",
-    stagger: {
-      amount: 0.3,
-    },
+export const handleHover = (e) => {
+  gsap.to(e.target, {
+    duration: 0.3,
+    y: 3,
+    skewX: 4,
+    ease: "power1.inOut",
+  });
+};
+
+// Hover off the link
+export const handleHoverExit = (e) => {
+  gsap.to(e.target, {
+    duration: 0.3,
+    y: -3,
+    skewX: 0,
+    ease: "power1.inOut",
   });
 };

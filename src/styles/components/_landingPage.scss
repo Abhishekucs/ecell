@@ -8,44 +8,91 @@
 .content__one {
   width: 100vw;
   height: 100vh;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // flex-direction: column;
+}
+
+.background {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $bg-color;
+  z-index: 1;
+  h1 {
+    font-size: 50rem;
+    font-family: serif;
+    color: darken($bg-color, 5%);
+  }
+}
+
+.foreground {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
   flex-direction: column;
-  background: url("/images/bg.png");
-  background-size: cover;
 }
 
 .content__one--title {
-  margin-bottom: 40rem;
   text-align: center;
-  color: $bg-color;
+  height: 13rem;
+  overflow: hidden;
+  margin-bottom: 15rem;
+  .line {
+    line-height: 1;
+    mix-blend-mode: multiply;
+  }
   h1 {
     font-size: 10rem;
     margin: 0;
     font-family: "Montserrat", sans-serif;
   }
   p {
-    margin: -20px 0 0 0;
     font-weight: 400;
     font-size: 3rem;
+    margin: 0;
   }
 }
 
 .button {
-  background: $bg-color;
+  background: #191919;
   border: none;
   border-radius: 2rem;
   padding: $s-size $l-size;
-  color: black;
+  color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-size: $m-size;
   cursor: pointer;
   outline: none;
-  box-shadow: 0px 3px 5px 0.5px #131b23;
 }
 
+.top {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  z-index: 2;
+}
+.inner__overlay {
+  width: 33.33vw;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #191919;
+  outline: none;
+}
 .about {
   height: 100vh;
   width: 100vw;
@@ -74,6 +121,9 @@
 .about__body__content {
   height: 100vh;
 }
+.inner {
+  margin-top: 4rem;
+}
 
 .about__title {
   font-size: 10rem;
@@ -90,13 +140,13 @@
 
 .button--about {
   display: inline-block;
-  margin-top: 3rem;
+  margin-top: 15rem;
   padding: $s-size $l-size;
+  background-color: $bg-color;
 }
 .button--about > * {
-  background: $bg-color;
   text-decoration: none;
-  color: black;
+  color: #191919;
 }
 
 .about__body__image {
@@ -179,9 +229,15 @@
     justify-content: space-evenly;
     padding: $l-size 0;
   }
+  .background {
+    h1 {
+      font-size: 9rem;
+    }
+  }
   .content__one--title {
     text-align: center;
     margin-bottom: 0;
+    height: 10rem;
     width: 85%;
     margin: 0 auto;
     h1 {
