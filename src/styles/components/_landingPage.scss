@@ -59,6 +59,7 @@
 
 .contactus {
   @extend .about;
+  z-index: -1;
 }
 .about__body {
   width: 85%;
