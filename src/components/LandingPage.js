@@ -19,14 +19,14 @@ const LandingPage = () => {
       delay: 0.5,
       stagger: 0.4,
     })
-    .from(".line", {
-      y: 200,
-      ease: "power4.out",
-      duration: 1,
-      stagger: {
-        amount: 0.3,
-      },
-    })
+      .from(".line", {
+        y: 200,
+        ease: "power4.out",
+        duration: 1,
+        stagger: {
+          amount: 0.3,
+        },
+      })
       .from(".button", {
         opacity: 0,
       });
